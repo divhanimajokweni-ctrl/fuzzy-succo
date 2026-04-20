@@ -1,6 +1,6 @@
 # Ubuntu Pools Analytics
 
-A comprehensive analytics dashboard for monitoring and managing Ubuntu Pools community engagement across villages, constituencies, and governance levels in Kenya.
+A comprehensive analytics dashboard for monitoring and managing Ubuntu Pools community engagement across neighborhoods, wards, and local governance levels in Gqeberha, South Africa.
 
 ## 🚀 Features
 

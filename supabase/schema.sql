@@ -144,8 +144,8 @@ INSERT INTO public.kpi_metrics (name, category, value, previous_value, unit, tre
   ('revenue', 'revenue', 89450, 72764, 'USD', 'up');
 
 INSERT INTO public.villages (name, code, governance_level, population, registered_members, active_members, total_pools) VALUES
-  ('Kibera East', 'KE001', 'village', 250000, 1250, 980, 145),
-  ('Mathare North', 'MN001', 'village', 180000, 980, 720, 89),
-  ('Mombasa CBD', 'MC001', 'village', 150000, 720, 580, 67),
-  ('Nakuru West', 'NW001', 'village', 120000, 540, 420, 45),
-  ('Kisumu Central', 'KC001', 'village', 100000, 480, 390, 52);
+  ('Summerstrand', 'SS001', 'village', 250000, 1250, 980, 145),
+  ('Humewood', 'HW001', 'village', 180000, 980, 720, 89),
+  ('Walmer', 'WM001', 'village', 150000, 720, 580, 67),
+  ('Newton Park', 'NP001', 'village', 120000, 540, 420, 45),
+  ('Central', 'CE001', 'village', 100000, 480, 390, 52);
