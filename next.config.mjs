@@ -1,0 +1,41 @@
+import { imageHosts } from './image-hosts.config.js';
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  productionBrowserSourceMaps: true,
+  distDir: process.env.DIST_DIR || '.next',
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  images: {
+    remotePatterns: imageHosts,
+  },
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/analytics-dashboard',
+        permanent: false,
+      },
+    ];
+  },
+  webpack(config, { dev }) {
+    if (dev) {
+      const ignoredPaths = (process.env.WATCH_IGNORED_PATHS || '')
+        .split(',')
+        .map((p) => p.trim())
+        .filter(Boolean);
+      config.watchOptions = {
+        ignored: ignoredPaths.length
+          ? ignoredPaths.map((p) => `**/${p.replace(/^\/+|\/+$/g, '')}/**`)
+          : undefined,
+      };
+    }
+    return config;
+  },
+};
+
+export default nextConfig;
